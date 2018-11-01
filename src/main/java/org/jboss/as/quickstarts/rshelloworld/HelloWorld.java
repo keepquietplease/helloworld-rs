@@ -16,7 +16,7 @@
  */
 package org.jboss.as.quickstarts.rshelloworld;
 
-import javax.inject.Inject;
+import javax.ejb.EJB;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -31,7 +31,8 @@ import javax.ws.rs.Produces;
 
 @Path("/")
 public class HelloWorld {
-    @Inject
+    
+    @EJB
     HelloService helloService;
 
     @GET
